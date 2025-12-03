@@ -3,6 +3,7 @@ package com.iblog.service;
 import com.iblog.bean.Article;
 import com.iblog.bean.User;
 import com.iblog.mapper.ArticleMapper;
+import com.iblog.mapper.TagsMapper;
 import com.iblog.utils.Util;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
