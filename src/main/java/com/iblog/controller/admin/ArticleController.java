@@ -2,6 +2,7 @@ package com.iblog.controller.admin;
 
 import com.iblog.bean.Article;
 import com.iblog.bean.RespBean;
+import com.iblog.bean.Role;
 import com.iblog.bean.User;
 import com.iblog.service.ArticleService;
 import com.iblog.utils.Util;
@@ -189,11 +190,17 @@ public class ArticleController {
      */
     private boolean isAuthorOrAdmin(Long ownerId) {
         User u = Util.getCurrentUser();
-        if (u == null || u.getId() == null) return false;
-        if (ownerId != null && ownerId.equals(u.getId())) return true;
+        if (u == null || u.getId() == null) {
+            return false;
+        }
+        if (ownerId != null && ownerId.equals(u.getId())) {
+            return true;
+        }
         if (u.getRoles() != null) {
             for (Role r : u.getRoles()) {
-                if ("超级管理员".equals(r.getName())) return true;
+                if ("超级管理员".equals(r.getName())) {
+                    return true;
+                }
             }
         }
         return false;
