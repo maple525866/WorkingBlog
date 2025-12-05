@@ -2,6 +2,7 @@ package com.iblog.service;
 
 import com.iblog.bean.Role;
 import com.iblog.bean.User;
+import com.iblog.mapper.RolesMapper;
 import com.iblog.mapper.UserMapper;
 import com.iblog.utils.Util;
 import lombok.RequiredArgsConstructor;
