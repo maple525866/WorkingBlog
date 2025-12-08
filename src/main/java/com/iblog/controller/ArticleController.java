@@ -1,4 +1,4 @@
-package com.iblog.controller.admin;
+package com.iblog.controller;
 
 import com.iblog.bean.Article;
 import com.iblog.bean.RespBean;
